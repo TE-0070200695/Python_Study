@@ -14,9 +14,20 @@ class Pico2():
     def __init__(self,ap="りんご",pi="パイナップル"):#コンストラクタ
         self.apple=ap
         self.pine=pi
-
+    
     def sayAP(self):
         print(self.apple,self.pine)
 p2 = Pico2()#値を渡さないといけない
 p2.sayAP()
 
+#コンストラクタ(イニシャライザ)の実装
+class Pico3:
+    apple="Apple"
+    pine="Pineapple"
+
+    @classmethod #この記述があるとクラスメソッド
+    def sayAP(cls):
+        print(cls.apple,cls.pine)
+
+p3 = Pico3()
+p3.sayAP()
