@@ -16,3 +16,4 @@ while b < len(a):
     if c%2 == 0:
         print(c)
     b +=1
+

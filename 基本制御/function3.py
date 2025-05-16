@@ -11,5 +11,6 @@ def addAndMultiply(a,b):
 result = addAndMultiply(3,4)
 print(result)
 
+#無名関数というものがある
 GetNum = getNumber
 print(GetNum())
