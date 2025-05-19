@@ -1,14 +1,16 @@
 import tkinter as tk
+import tkinter.messagebox as mb
+
+def tell_fortune():
+    mb.showinfo("タイトル","本文です")
 
 root = tk.Tk()
 root.title("Python占い")
 root.geometry("600x400")
 
+    
 desc_label = tk.Label(text="あなたの運勢を占います。下のボタンをクリックしてください。")#ラベルの作成
 desc_label.pack()
-
-def tell_fortune():
-    print("Fortune telling!")#この占いのロジックを描きます
 
 ft_button = tk.Button(
     text = "占う",
