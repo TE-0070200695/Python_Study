@@ -1,7 +1,8 @@
 class Human:
     """人間を表すクラス"""
+    species = "ホモサピエンス"
 
-    def __init__(self,name,height,weight):#インスタンス
+    def __init__(self,name,height,weight,age):#インスタンス
         self.name = name
         self.height = height
         self.weight = weight
@@ -35,12 +36,23 @@ class Human:
             raise ValueError("ageは整数で指定してください。")
         self._age = value
 
-ikuma = Human("ikuma",170,60)
+class Customer(Human):
+    """顧客を表すクラス"""
+    def __init__(self,name,height,weight,age,customer_number):
+        super().__init__(name,height,weight,age)
+        self.customer_number = customer_number
+
+ikuma = Customer("ikuma",170,60,20,1)
 print(ikuma.name,ikuma.height,ikuma.weight)
 ikuma.walk
 print(ikuma._height_meter)
+print(ikuma.species)
+print(ikuma.customer_number)
 
-sato = Human("sato",160,50)
+print()
+
+sato = Human("sato",160,50,42)
 print(sato.name,sato.height,sato.weight)
 sato.walk
 print(sato.bmi)
+
